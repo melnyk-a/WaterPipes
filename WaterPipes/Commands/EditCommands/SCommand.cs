@@ -6,7 +6,7 @@ namespace WaterPipes.Commands.EditCommands
 {
     internal sealed class SCommand : EditCommand
     {
-        public SCommand(Key key, MovementArea movementArea, 
+        public SCommand(Key key, MovementArea movementArea,
                         GameObjectArea objectArea) :
            base(key, movementArea, objectArea)
         {

@@ -9,7 +9,7 @@ namespace WaterPipes.Commands.EditCommands
         protected readonly MovementArea movementArea;
         protected readonly GameObjectArea objectArea;
 
-        public EditCommand(Key key, MovementArea movementArea, 
+        public EditCommand(Key key, MovementArea movementArea,
                             GameObjectArea objectArea) :
             base(key)
         {
@@ -26,7 +26,7 @@ namespace WaterPipes.Commands.EditCommands
         {
             get { return movementArea.Cursor.Position.Y - movementArea.Top; }
         }
-        
+
         protected abstract IGameModelObject Create();
 
         public override void Execute()

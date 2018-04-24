@@ -9,7 +9,7 @@ namespace WaterPipes.Commands.EditCommands
     {
         private readonly TileArea tileArea;
 
-        public DeleteCommand(Key key, MovementArea movementArea, 
+        public DeleteCommand(Key key, MovementArea movementArea,
                             GameObjectArea objectArea, TileArea tileArea) :
             base(key, movementArea, objectArea)
         {
@@ -21,13 +21,13 @@ namespace WaterPipes.Commands.EditCommands
             IGameModelObject modelObject = objectArea[RowIndex, CollumIndex];
             bool canDelete = false;
             string name = objectArea[RowIndex, CollumIndex].Name;
-            if ( name== "Pipe"||name=="Source")
+            if (name == "Pipe" || name == "Source")
             {
                 foreach (var neighbor in tileArea[RowIndex, CollumIndex].Neighbors)
                 {
                     if (objectArea[neighbor.X, neighbor.Y].Name == "Pipe")
                     {
-                        Point notInclude= tileArea[RowIndex, CollumIndex].Position;
+                        Point notInclude = tileArea[RowIndex, CollumIndex].Position;
                         if (IsNeighborSource(neighbor, notInclude))
                         {
                             canDelete = true;
@@ -54,7 +54,7 @@ namespace WaterPipes.Commands.EditCommands
             foreach (var neighbor in tileArea[current.X, current.Y].Neighbors)
             {
                 string name = objectArea[neighbor.X, neighbor.Y].Name;
-                if (!(neighbor.Equals(notInclude)) &&  name== "Source")
+                if (!(neighbor.Equals(notInclude)) && name == "Source")
                 {
                     isNeighborSource = true;
                     break;
