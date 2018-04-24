@@ -7,7 +7,7 @@ namespace WaterPipes.Commands.EditCommands
 {
     internal sealed class DeleteCommand : EditCommand
     {
-        private TileArea tileArea;
+        private readonly TileArea tileArea;
 
         public DeleteCommand(Key key, MovementArea movementArea, 
                             GameObjectArea objectArea, TileArea tileArea) :
@@ -20,7 +20,8 @@ namespace WaterPipes.Commands.EditCommands
         {
             IGameModelObject modelObject = objectArea[RowIndex, CollumIndex];
             bool canDelete = false;
-            if (objectArea[RowIndex, CollumIndex].Name == "Pipe")
+            string name = objectArea[RowIndex, CollumIndex].Name;
+            if ( name== "Pipe"||name=="Source")
             {
                 foreach (var neighbor in tileArea[RowIndex, CollumIndex].Neighbors)
                 {

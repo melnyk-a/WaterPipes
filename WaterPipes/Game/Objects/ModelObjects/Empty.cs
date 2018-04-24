@@ -1,11 +1,12 @@
 ﻿using WaterPipes.Game.Objects.GeometricObjects;
 using WaterPipes.OutputProviders;
+using WaterPipes.Game.Objects.ModelObjects.Models;
 
 namespace WaterPipes.Game.Objects.ModelObjects
 {
     internal sealed class Empty : IGameModelObject
     {
-        private const char symbol = ' ';
+        private readonly EmptyModel model = new EmptyModel();
 
         public string Name { get; } = "Empty";
 
@@ -16,7 +17,7 @@ namespace WaterPipes.Game.Objects.ModelObjects
 
         public void Draw(IOutputProvider provider, Point startPosition)
         {
-            provider.Draw(symbol);
+            model.Draw(provider, startPosition);
         }
     }
 }

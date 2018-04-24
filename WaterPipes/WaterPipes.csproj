@@ -63,6 +63,7 @@
     <Compile Include="Game\Objects\INamable.cs" />
     <Compile Include="Game\Objects\GeometricObjects\IRectangle.cs" />
     <Compile Include="Game\Areas\GameObjectArea.cs" />
+    <Compile Include="Game\Objects\ModelObjects\Models\EmptyModel.cs" />
     <Compile Include="Game\Objects\ModelObjects\Pipe.cs" />
     <Compile Include="Game\Objects\ModelObjects\Source.cs" />
     <Compile Include="Game\Objects\IDrawable.cs" />

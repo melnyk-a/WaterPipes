@@ -7,8 +7,8 @@ namespace WaterPipes.Game.Objects.ModelObjects
 {
     internal sealed class Pipe : IGameModelObject
     {
-        bool isFilled = false;
         private readonly PipeModel model = new PipeModel();
+        private bool isFilled = false;
 
         public Pipe()
         {

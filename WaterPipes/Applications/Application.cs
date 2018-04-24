@@ -4,14 +4,14 @@ namespace WaterPipes.Applications
 {
     internal sealed class Application
     {
-        private const int delay = 400;
-        private const int height = 15;
-        private const int width = 30;
+        private const int Delay = 400;
+        private const int Height = 15;
+        private const int Width = 30;
         private readonly PipeLine pipeLine;
 
         public Application()
         {
-            pipeLine = new PipeLine(width, height, delay);
+            pipeLine = new PipeLine(Width, Height, Delay);
         }
 
         public void Run()

@@ -6,7 +6,7 @@ namespace WaterPipes.Commands.MoveCommands
 {
     internal abstract class MoveCommand : Command
     {
-        protected MovementArea movementArea;
+        protected readonly MovementArea movementArea;
 
         public MoveCommand(Key key, MovementArea movementArea) :
             base(key)

@@ -6,12 +6,12 @@ namespace WaterPipes.Game.Objects.ModelObjects.Models
 
     internal abstract class Model : IDrawable
     {
+        private readonly char Symbol;
         protected Color color;
-        private char symbol;
 
         public Model(char symbol, Color color)
         {
-            this.symbol = symbol;
+            Symbol = symbol;
             this.color = color;
         }
 
@@ -19,7 +19,7 @@ namespace WaterPipes.Game.Objects.ModelObjects.Models
         {
             provider.SetPosition(startPosition);
             provider.SetForegroundColor(color);
-            provider.Draw(symbol);
+            provider.Draw(Symbol);
             provider.ResetColor();
         }
     }

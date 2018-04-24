@@ -6,7 +6,7 @@ namespace WaterPipes.Commands.EditCommands
 {
     internal sealed class EnterCommand : EditCommand
     {
-        private TileArea tileArea;
+        private readonly TileArea tileArea;
 
         public EnterCommand(Key key, MovementArea movementArea, 
                             GameObjectArea objectArea, TileArea tileArea) :

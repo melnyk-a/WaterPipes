@@ -6,9 +6,9 @@ namespace WaterPipes.Game.Objects
 {
     internal sealed class GameBoard : IDrawable
     {
-        private const int countOfHorizontalFrame = 2;
-        private const int countOfVerticalFrame = 2;
-        private const char frameSymbol = '+';
+        private const int CountOfHorizontalFrame = 2;
+        private const int CountOfVerticalFrame = 2;
+        private const char FrameSymbol = '+';
 
         public GameBoard(int width, int height)
         {
@@ -31,14 +31,14 @@ namespace WaterPipes.Game.Objects
         public void Draw(IOutputProvider provider, Point startPosition)
         {
             provider.SetPosition(startPosition);
-            for (int i = 0; i < Height + FrameSize * countOfVerticalFrame; ++i)
+            for (int i = 0; i < Height + FrameSize * CountOfVerticalFrame; ++i)
             {
-                for (int j = 0; j < Width + FrameSize * countOfHorizontalFrame; ++j)
+                for (int j = 0; j < Width + FrameSize * CountOfHorizontalFrame; ++j)
                 {
                     if (i < FrameSize || i >= Height + FrameSize ||
                         j < FrameSize || j >= Width + FrameSize)
                     {
-                        provider.Draw(frameSymbol);
+                        provider.Draw(FrameSymbol);
                     }
                     else
                     {
