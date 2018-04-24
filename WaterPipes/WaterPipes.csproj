@@ -42,11 +42,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Applications\Application.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\EditCommands\DeleteCommand.cs" />
+    <Compile Include="Commands\EditCommands\EditCommand.cs" />
+    <Compile Include="Commands\EditCommands\EnterCommand.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\MoveCommands\MoveCommand.cs" />
+    <Compile Include="Commands\MoveCommands\MoveDownCommand.cs" />
+    <Compile Include="Commands\MoveCommands\MoveLeftCommand.cs" />
+    <Compile Include="Commands\MoveCommands\MoveRightCommand.cs" />
+    <Compile Include="Commands\MoveCommands\MoveUpCommand.cs" />
+    <Compile Include="Commands\EditCommands\SCommand.cs" />
+    <Compile Include="Commands\SpaceCommand.cs" />
+    <Compile Include="Game\Areas\Area.cs" />
+    <Compile Include="Game\Objects\ModelObjects\Cursor.cs" />
+    <Compile Include="Game\GameOverManager\GameOverControl.cs" />
+    <Compile Include="Game\Objects\ModelObjects\Empty.cs" />
+    <Compile Include="Game\Objects\ModelObjects\IGameModelObject.cs" />
+    <Compile Include="Game\Objects\INamable.cs" />
+    <Compile Include="Game\Objects\GeometricObjects\IRectangle.cs" />
+    <Compile Include="Game\Areas\GameObjectArea.cs" />
+    <Compile Include="Game\Objects\ModelObjects\Pipe.cs" />
+    <Compile Include="Game\Objects\ModelObjects\Source.cs" />
+    <Compile Include="Game\Objects\IDrawable.cs" />
+    <Compile Include="Game\Objects\GameBoard.cs" />
+    <Compile Include="Game\Objects\Generation.cs" />
+    <Compile Include="Game\Objects\GeometricObjects\Point.cs" />
+    <Compile Include="Game\Objects\PipeLine.cs" />
+    <Compile Include="Game\Areas\MovementArea.cs" />
+    <Compile Include="Game\Objects\GeometricObjects\Tile.cs" />
+    <Compile Include="Game\Areas\TileArea.cs" />
+    <Compile Include="InputProviders\ConsoleInputProvider.cs" />
+    <Compile Include="InputProviders\IInputProvider.cs" />
+    <Compile Include="Game\Objects\ModelObjects\Models\CursorModel.cs" />
+    <Compile Include="Game\Objects\ModelObjects\Models\Model.cs" />
+    <Compile Include="Game\Objects\ModelObjects\Models\PipeModel.cs" />
+    <Compile Include="Game\Objects\ModelObjects\Models\SourceModel.cs" />
+    <Compile Include="InputProviders\Key.cs" />
+    <Compile Include="OutputProviders\Color.cs" />
+    <Compile Include="OutputProviders\ConsoleOutputProvider.cs" />
+    <Compile Include="OutputProviders\IOutputProvider.cs" />
+    <Compile Include="PositionEventArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

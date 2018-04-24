@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using WaterPipes.Applications;
 
 namespace WaterPipes
 {
-    internal sealed class Program
+    internal static class Program
     {
-        static void Main(string[] arguments)
+        private static void Main(string[] commandLineArguments)
         {
+            Application pipeLine = new Application();
+            pipeLine.Run();
         }
     }
 }
