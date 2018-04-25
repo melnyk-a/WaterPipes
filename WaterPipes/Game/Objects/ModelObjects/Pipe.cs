@@ -14,8 +14,12 @@ namespace WaterPipes.Game.Objects.ModelObjects
         {
             FilledChange += new EventHandler(model.UpdateColor);
         }
+        string IName.Name
+        {
+            get { return Name; }
+        }
 
-        public string Name { get; } = "Pipe";
+        public static string Name { get; } = "Pipe";
 
         public event EventHandler FilledChange;
 

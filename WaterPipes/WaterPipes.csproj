@@ -60,7 +60,7 @@
     <Compile Include="Game\GameOverManager\GameOverControl.cs" />
     <Compile Include="Game\Objects\ModelObjects\Empty.cs" />
     <Compile Include="Game\Objects\ModelObjects\IGameModelObject.cs" />
-    <Compile Include="Game\Objects\INamable.cs" />
+    <Compile Include="Game\Objects\IName.cs" />
     <Compile Include="Game\Objects\GeometricObjects\IRectangle.cs" />
     <Compile Include="Game\Areas\GameObjectArea.cs" />
     <Compile Include="Game\Objects\ModelObjects\Models\EmptyModel.cs" />

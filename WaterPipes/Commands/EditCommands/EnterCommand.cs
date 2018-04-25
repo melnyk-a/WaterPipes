@@ -1,4 +1,5 @@
 ﻿using WaterPipes.Game.Areas;
+using WaterPipes.Game.Objects;
 using WaterPipes.Game.Objects.ModelObjects;
 using WaterPipes.InputProviders;
 
@@ -20,8 +21,8 @@ namespace WaterPipes.Commands.EditCommands
             IGameModelObject newObject = null;
             foreach (var neightbor in tileArea[RowIndex, ColumnIndex].Neighbors)
             {
-                string name = objectArea[neightbor.X, neightbor.Y].Name;
-                if (name == "Source" || name == "Pipe")
+                string name = ((IName)objectArea[neightbor.X, neightbor.Y]).Name;
+                if (name == Source.Name || name == Pipe.Name)
                 {
                     newObject = new Pipe();
                     break;

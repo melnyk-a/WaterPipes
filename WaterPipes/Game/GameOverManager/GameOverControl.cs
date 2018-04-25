@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using WaterPipes.Game.Areas;
+using WaterPipes.Game.Objects;
 using WaterPipes.Game.Objects.GeometricObjects;
 using WaterPipes.Game.Objects.ModelObjects;
 
@@ -47,7 +48,7 @@ namespace WaterPipes.Game.GameOverManager
             {
                 for (int j = 0; j < tileArea.Width; ++j)
                 {
-                    if (objectArea[i, j].Name == "Pipe")
+                    if (((IName)objectArea[i, j]).Name == Pipe.Name)
                     {
                         if (objectArea[i, j] is Pipe pipe && !pipe.IsFilled)
                         {

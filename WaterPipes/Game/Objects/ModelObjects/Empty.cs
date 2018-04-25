@@ -6,9 +6,15 @@ namespace WaterPipes.Game.Objects.ModelObjects
 {
     internal sealed class Empty : IGameModelObject
     {
+
         private readonly EmptyModel model = new EmptyModel();
 
-        public string Name { get; } = "Empty";
+        string IName.Name
+        {
+            get { return Name; }
+        }
+
+        public static string Name { get; } = "Empty";
 
         public object Clone()
         {

@@ -2,6 +2,7 @@
 using WaterPipes.Game.Objects.GeometricObjects;
 using WaterPipes.Game.Objects.ModelObjects;
 using WaterPipes.InputProviders;
+using WaterPipes.Game.Objects;
 
 namespace WaterPipes.Commands.EditCommands
 {
@@ -20,12 +21,12 @@ namespace WaterPipes.Commands.EditCommands
         {
             IGameModelObject modelObject = objectArea[RowIndex, ColumnIndex];
             bool canDelete = false;
-            string name = objectArea[RowIndex, ColumnIndex].Name;
-            if (name == "Pipe" || name == "Source")
+            string name = ((IName)objectArea[RowIndex, ColumnIndex]).Name;
+            if (name == Pipe.Name || name == Source.Name)
             {
                 foreach (var neighbor in tileArea[RowIndex, ColumnIndex].Neighbors)
                 {
-                    if (objectArea[neighbor.X, neighbor.Y].Name == "Pipe")
+                    if (((IName)objectArea[neighbor.X, neighbor.Y]).Name == Pipe.Name)
                     {
                         Point notInclude = tileArea[RowIndex, ColumnIndex].Position;
                         if (IsNeighborSource(neighbor, notInclude))
@@ -53,8 +54,8 @@ namespace WaterPipes.Commands.EditCommands
 
             foreach (var neighbor in tileArea[current.X, current.Y].Neighbors)
             {
-                string name = objectArea[neighbor.X, neighbor.Y].Name;
-                if (!(neighbor.Equals(notInclude)) && name == "Source")
+                string name = ((IName)objectArea[neighbor.X, neighbor.Y]).Name;
+                if (!(neighbor.Equals(notInclude)) && name == Source.Name)
                 {
                     isNeighborSource = true;
                     break;
@@ -64,8 +65,8 @@ namespace WaterPipes.Commands.EditCommands
             {
                 foreach (var neighbor in tileArea[current.X, current.Y].Neighbors)
                 {
-                    string name = objectArea[neighbor.X, neighbor.Y].Name;
-                    if (!(neighbor.Equals(notInclude)) && name == "Pipe")
+                    string name = ((IName)objectArea[neighbor.X, neighbor.Y]).Name;
+                    if (!(neighbor.Equals(notInclude)) && name == Pipe.Name)
                     {
                         isNeighborSource = IsNeighborSource(neighbor, current);
                     }

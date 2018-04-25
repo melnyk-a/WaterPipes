@@ -8,7 +8,12 @@ namespace WaterPipes.Game.Objects.ModelObjects
     {
         private readonly SourceModel model = new SourceModel();
 
-        public string Name { get; } = "Source";
+        string IName.Name
+        {
+            get { return Name; }
+        }
+
+        public static string Name { get; } = "Source";
 
         public object Clone()
         {

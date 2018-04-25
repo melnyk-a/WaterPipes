@@ -119,11 +119,11 @@ namespace WaterPipes.Game.Objects
             {
                 for (int j = 0; j < gameBoard.Width; ++j)
                 {
-                    if (gameBoard.ObjectArea[i, j].Name == "Source")
+                    if (((IName)gameBoard.ObjectArea[i, j]).Name == Source.Name)
                     {
                         FillNeighbors(objectSpaceCopy, gameBoard.TileArea[i, j].Neighbors);
                     }
-                    else if (gameBoard.ObjectArea[i, j].Name == "Pipe")
+                    else if (((IName)gameBoard.ObjectArea[i, j]).Name == Pipe.Name)
                     {
                         if ((gameBoard.ObjectArea[i, j] as Pipe).IsFilled)
                         {
