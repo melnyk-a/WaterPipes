@@ -48,7 +48,7 @@ namespace WaterPipes.Game.GameOverManager
             {
                 for (int j = 0; j < tileArea.Width; ++j)
                 {
-                    if (((IName)objectArea[i, j]).Name == Pipe.Name)
+                    if (objectArea[i, j].Name == Pipe.Name)
                     {
                         if (objectArea[i, j] is Pipe pipe && !pipe.IsFilled)
                         {

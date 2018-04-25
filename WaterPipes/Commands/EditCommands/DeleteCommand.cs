@@ -21,12 +21,12 @@ namespace WaterPipes.Commands.EditCommands
         {
             IGameModelObject modelObject = objectArea[RowIndex, ColumnIndex];
             bool canDelete = false;
-            string name = ((IName)objectArea[RowIndex, ColumnIndex]).Name;
+            string name = objectArea[RowIndex, ColumnIndex].Name;
             if (name == Pipe.Name || name == Source.Name)
             {
                 foreach (var neighbor in tileArea[RowIndex, ColumnIndex].Neighbors)
                 {
-                    if (((IName)objectArea[neighbor.X, neighbor.Y]).Name == Pipe.Name)
+                    if (objectArea[neighbor.X, neighbor.Y].Name == Pipe.Name)
                     {
                         Point notInclude = tileArea[RowIndex, ColumnIndex].Position;
                         if (IsNeighborSource(neighbor, notInclude))
@@ -58,7 +58,7 @@ namespace WaterPipes.Commands.EditCommands
 
             foreach (var neighbor in tileArea[current.X, current.Y].Neighbors)
             {
-                string name = ((IName)objectArea[neighbor.X, neighbor.Y]).Name;
+                string name = objectArea[neighbor.X, neighbor.Y].Name;
                 if (!(neighbor.Equals(notInclude)) && name == Source.Name)
                 {
                     isNeighborSource = true;
@@ -69,7 +69,7 @@ namespace WaterPipes.Commands.EditCommands
             {
                 foreach (var neighbor in tileArea[current.X, current.Y].Neighbors)
                 {
-                    string name = ((IName)objectArea[neighbor.X, neighbor.Y]).Name;
+                    string name = objectArea[neighbor.X, neighbor.Y].Name;
                     if (!(neighbor.Equals(notInclude)) && name == Pipe.Name)
                     {
                         isNeighborSource = IsNeighborSource(neighbor, current);

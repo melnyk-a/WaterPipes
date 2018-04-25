@@ -21,7 +21,7 @@ namespace WaterPipes.Commands.EditCommands
             IGameModelObject newObject = null;
             foreach (var neightbor in tileArea[RowIndex, ColumnIndex].Neighbors)
             {
-                string name = ((IName)objectArea[neightbor.X, neightbor.Y]).Name;
+                string name = objectArea[neightbor.X, neightbor.Y].Name;
                 if (name == Source.Name || name == Pipe.Name)
                 {
                     newObject = new Pipe();
