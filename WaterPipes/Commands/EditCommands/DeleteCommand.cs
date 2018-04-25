@@ -39,11 +39,15 @@ namespace WaterPipes.Commands.EditCommands
                             break;
                         }
                     }
+                    else
+                    {
+                        canDelete = true;
+                    }
                 }
-                if (canDelete)
-                {
-                    modelObject = new Empty();
-                }
+            }
+            if (canDelete)
+            {
+                modelObject = new Empty();
             }
             return modelObject;
         }
