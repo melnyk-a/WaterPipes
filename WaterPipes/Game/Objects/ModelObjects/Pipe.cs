@@ -21,11 +21,10 @@ namespace WaterPipes.Game.Objects.ModelObjects
 
         public object Clone()
         {
-            Pipe clone = new Pipe
+            return new Pipe
             {
                 IsFilled = isFilled
             };
-            return clone;
         }
 
         public void Draw(IOutputProvider provider, Point startPosition)

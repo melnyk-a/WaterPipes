@@ -45,7 +45,7 @@ namespace WaterPipes.Game.Objects
 
         private ICollection<ICommand> CreateCommand(MovementArea movementArea)
         {
-            ICollection<ICommand> commands = new List<ICommand>
+            return new List<ICommand>
             {
                 new MoveRightCommand(Key.RightArrow, movementArea),
                 new MoveLeftCommand(Key.LeftArrow, movementArea),
@@ -56,7 +56,6 @@ namespace WaterPipes.Game.Objects
                 new DeleteCommand(Key.Delete, movementArea, gameBoard.ObjectArea, gameBoard.TileArea),
                 new SpaceCommand(Key.Spacebar, this)
             };
-            return commands;
         }
 
         public void Execute()
