@@ -7,10 +7,7 @@ namespace WaterPipes.OutputProviders
     {
         public Point CurrentPosition
         {
-            get
-            {
-                return new Point(Console.CursorLeft, Console.CursorTop);
-            }
+            get { return new Point(Console.CursorLeft, Console.CursorTop); }
         }
 
         public void Draw(char value)
