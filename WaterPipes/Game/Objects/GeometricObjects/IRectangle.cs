@@ -2,9 +2,9 @@
 {
     internal interface IRectangle
     {
-         int Height { get; }
-         int Left { get; }
-         int Width { get; }
-         int Top { get; }
+        int Height { get; }
+        int Left { get; }
+        int Top { get; }
+        int Width { get; }
     }
 }

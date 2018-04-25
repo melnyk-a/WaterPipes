@@ -9,9 +9,9 @@ namespace WaterPipes.Game.Objects.GeometricObjects
             Position = position;
         }
 
-        public Point Position { get; }
-
         public IList<Point> Neighbors { get; } = new List<Point>();
+
+        public Point Position { get; }
 
         public void AddNeighbor(Point neighbor)
         {

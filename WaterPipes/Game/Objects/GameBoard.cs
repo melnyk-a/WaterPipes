@@ -19,10 +19,10 @@ namespace WaterPipes.Game.Objects
         }
 
         public int FrameSize { get; } = 1;
+        
+        public int Height { get; }
 
         public GameObjectArea ObjectArea { get; set; }
-
-        public int Height { get; }
 
         public TileArea TileArea { get; }
 
