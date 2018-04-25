@@ -18,7 +18,7 @@ namespace WaterPipes.Commands.EditCommands
         protected override IGameModelObject Create()
         {
             IGameModelObject newObject = null;
-            foreach (var neightbor in tileArea[RowIndex, CollumIndex].Neighbors)
+            foreach (var neightbor in tileArea[RowIndex, ColumnIndex].Neighbors)
             {
                 string name = objectArea[neightbor.X, neightbor.Y].Name;
                 if (name == "Source" || name == "Pipe")
@@ -29,7 +29,7 @@ namespace WaterPipes.Commands.EditCommands
             }
             if (newObject == null)
             {
-                newObject = objectArea[RowIndex, CollumIndex];
+                newObject = objectArea[RowIndex, ColumnIndex];
             }
             return newObject;
         }

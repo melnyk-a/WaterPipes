@@ -17,7 +17,7 @@ namespace WaterPipes.Commands.EditCommands
             this.movementArea = movementArea;
         }
 
-        protected int CollumIndex
+        protected int ColumnIndex
         {
             get { return movementArea.Cursor.Position.X - movementArea.Left; }
         }
@@ -31,7 +31,7 @@ namespace WaterPipes.Commands.EditCommands
 
         public override void Execute()
         {
-            objectArea[RowIndex, CollumIndex] = Create();
+            objectArea[RowIndex, ColumnIndex] = Create();
         }
     }
 }

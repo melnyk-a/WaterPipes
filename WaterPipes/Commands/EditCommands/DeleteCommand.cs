@@ -18,16 +18,16 @@ namespace WaterPipes.Commands.EditCommands
 
         protected override IGameModelObject Create()
         {
-            IGameModelObject modelObject = objectArea[RowIndex, CollumIndex];
+            IGameModelObject modelObject = objectArea[RowIndex, ColumnIndex];
             bool canDelete = false;
-            string name = objectArea[RowIndex, CollumIndex].Name;
+            string name = objectArea[RowIndex, ColumnIndex].Name;
             if (name == "Pipe" || name == "Source")
             {
-                foreach (var neighbor in tileArea[RowIndex, CollumIndex].Neighbors)
+                foreach (var neighbor in tileArea[RowIndex, ColumnIndex].Neighbors)
                 {
                     if (objectArea[neighbor.X, neighbor.Y].Name == "Pipe")
                     {
-                        Point notInclude = tileArea[RowIndex, CollumIndex].Position;
+                        Point notInclude = tileArea[RowIndex, ColumnIndex].Position;
                         if (IsNeighborSource(neighbor, notInclude))
                         {
                             canDelete = true;
