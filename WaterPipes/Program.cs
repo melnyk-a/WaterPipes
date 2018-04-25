@@ -4,7 +4,7 @@ namespace WaterPipes
 {
     internal static class Program
     {
-        private static void Main(string[] commandLineArguments)
+        private static void Main()
         {
             Application pipeLine = new Application();
             pipeLine.Run();
