@@ -14,6 +14,7 @@ namespace WaterPipes.Game.Objects.ModelObjects
         {
             FilledChange += new EventHandler(model.UpdateColor);
         }
+
         string IName.Name
         {
             get { return Name; }
