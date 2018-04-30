@@ -2,7 +2,6 @@
 using WaterPipes.Game.Objects.GeometricObjects;
 using WaterPipes.Game.Objects.ModelObjects;
 using WaterPipes.InputProviders;
-using WaterPipes.Game.Objects;
 
 namespace WaterPipes.Commands.EditCommands
 {
